@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Why Drone Cleaning Is the Smarter Way to Maintain Buildings in Latin America</title>
+<meta name="description" content="Ionized water drone cleaning is 3–5× faster, up to 60% cheaper, and eliminates all human risk at height. A complete guide for building owners in Latin America.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@300;400;500;600;700&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+
+:root {
+  --white:    #ffffff;
+  --bg:       #f8f9fa;
+  --bg2:      #f0f2f5;
+  --ink:      #111827;
+  --ink2:     #374151;
+  --ink3:     #6b7280;
+  --ink4:     #9ca3af;
+  --blue:     #1d4ed8;
+  --blue2:    #2563eb;
+  --blue3:    #3b82f6;
+  --blue-lt:  #eff6ff;
+  --blue-bd:  #bfdbfe;
+  --green:    #059669;
+  --red:      #dc2626;
+  --border:   #e5e7eb;
+  --border2:  #d1d5db;
+  --radius:   6px;
+  --shadow:   0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.04);
+  --shadow2:  0 4px 16px rgba(0,0,0,.08);
+}
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; font-size:16px; }
+body {
+  background:var(--white);
+  color:var(--ink);
+  font-family:'Inter', system-ui, -apple-system, sans-serif;
+  font-size:1rem;
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+}
+img { display:block; max-width:100%; height:auto; }
+a { text-decoration:none; color:inherit; }
+
+/* ── NAV ── */
+.site-nav {
+  position:fixed; top:0; left:0; right:0; z-index:500;
+  height:68px;
+  background:var(--white);
+  border-bottom:1px solid var(--border);
+  display:flex; align-items:center;
+  padding:0 4vw;
+  gap:2rem;
+}
+.nav-brand {
+  display:flex; align-items:center; gap:.75rem;
+  text-decoration:none; flex-shrink:0;
+}
+.nav-brand-mark {
+  width:36px; height:36px;
+  background:var(--blue); border-radius:var(--radius);
+  display:flex; align-items:center; justify-content:center;
+}
+.nav-brand-mark svg { width:20px; height:20px; stroke:#fff; fill:none; stroke-width:2; }
+.nav-brand-text strong { display:block; font-size:.95rem; font-weight:700; color:var(--ink); line-height:1.1; }
+.nav-brand-text span { font-size:.7rem; color:var(--ink3); font-weight:400; }
+.nav-links-wrap { display:flex; align-items:center; gap:0; margin-left:auto; }
+.nav-links { display:flex; gap:.25rem; list-style:none; align-items:center; }
+.nav-links a {
+  font-size:.85rem; color:var(--ink2); font-weight:500;
+  padding:.45rem .85rem; border-radius:var(--radius);
+  transition:background .15s, color .15s;
+}
+.nav-links a:hover { background:var(--bg); color:var(--ink); }
+.nav-links a.active { color:var(--blue); background:var(--blue-lt); }
+.nav-cta {
+  margin-left:.75rem;
+  background:var(--blue); color:#fff !important;
+  font-size:.82rem; font-weight:600;
+  padding:.5rem 1.2rem; border-radius:var(--radius);
+  transition:background .15s;
+  white-space:nowrap;
+}
+.nav-cta:hover { background:var(--blue2) !important; }
+
+/* Mobile nav */
+.nav-hamburger {
+  display:none; flex-direction:column; gap:5px;
+  cursor:pointer; margin-left:auto; padding:.4rem;
+  background:none; border:none;
+}
+.nav-hamburger span {
+  display:block; width:22px; height:2px;
+  background:var(--ink); border-radius:2px;
+  transition:all .25s;
+}
+.nav-drawer {
+  display:none;
+  position:fixed; top:68px; left:0; right:0; bottom:0; z-index:400;
+  background:var(--white);
+  padding:1.5rem 4vw;
+  border-top:1px solid var(--border);
+  flex-direction:column; gap:.25rem;
+  overflow-y:auto;
+}
+.nav-drawer.open { display:flex; }
+.nav-drawer a {
+  font-size:1rem; color:var(--ink2); font-weight:500;
+  padding:.75rem 1rem; border-radius:var(--radius);
+  border-bottom:1px solid var(--border);
+  transition:background .15s;
+}
+.nav-drawer a:hover { background:var(--bg); color:var(--ink); }
+.nav-drawer .drawer-cta {
+  margin-top:1rem;
+  background:var(--blue); color:#fff;
+  text-align:center; border:none; border-radius:var(--radius);
+  font-weight:600; padding:1rem;
+}
+
+/* ── BUTTONS ── */
+.btn {
+  display:inline-flex; align-items:center; gap:.5rem;
+  font-size:.88rem; font-weight:600; border-radius:var(--radius);
+  padding:.7rem 1.6rem; text-decoration:none; transition:all .18s;
+  cursor:pointer; border:none; font-family:inherit;
+}
+.btn svg { width:14px; height:14px; stroke:currentColor; fill:none; stroke-width:2.5; }
+.btn-blue { background:var(--blue); color:#fff; }
+.btn-blue:hover { background:var(--blue2); transform:translateY(-1px); box-shadow:var(--shadow2); }
+.btn-outline { background:transparent; color:var(--blue); border:1.5px solid var(--blue-bd); }
+.btn-outline:hover { background:var(--blue-lt); border-color:var(--blue3); }
+.btn-white { background:#fff; color:var(--ink); }
+.btn-white:hover { background:var(--bg); }
+
+/* ── SECTION COMMONS ── */
+.page-top { margin-top:68px; }
+.section { padding:5rem 4vw; }
+.section.bg-light { background:var(--bg); }
+.section.bg-dark { background:var(--ink); color:#fff; }
+.section.border-top { border-top:1px solid var(--border); }
+.container { max-width:1280px; margin:0 auto; width:100%; }
+.container-md { max-width:900px; margin:0 auto; width:100%; }
+.eyebrow {
+  font-size:.72rem; letter-spacing:.18em; text-transform:uppercase;
+  color:var(--blue); font-weight:600; margin-bottom:.75rem;
+  display:flex; align-items:center; gap:.5rem;
+}
+.eyebrow::before { content:''; width:16px; height:1.5px; background:var(--blue); }
+h1.display {
+  font-family:'Playfair Display', Georgia, serif;
+  font-size:clamp(2.5rem, 5vw, 4rem);
+  font-weight:700; line-height:1.1; color:var(--ink);
+}
+h2.display {
+  font-family:'Playfair Display', Georgia, serif;
+  font-size:clamp(1.9rem, 3.2vw, 2.75rem);
+  font-weight:700; line-height:1.15; color:var(--ink);
+}
+h2.display em { font-style:italic; color:var(--blue2); }
+.lead { font-size:1.05rem; color:var(--ink3); line-height:1.8; max-width:620px; }
+.lead-wide { font-size:1.05rem; color:var(--ink3); line-height:1.8; }
+
+/* ── CARDS ── */
+.card {
+  background:var(--white); border:1px solid var(--border);
+  border-radius:var(--radius); overflow:hidden;
+  transition:box-shadow .2s, transform .2s;
+}
+.card:hover { box-shadow:var(--shadow2); transform:translateY(-2px); }
+
+.video-wrap iframe {
+  position:absolute; top:0; left:0;
+  width:100%; height:100%; border:none;
+}
+
+/* ── REVEAL ── */
+.reveal { opacity:0; transform:translateY(16px); transition:opacity .55s ease, transform .55s ease; }
+.reveal.visible { opacity:1; transform:none; }
+
+/* ── FOOTER ── */
+.site-footer {
+  background:var(--ink); color:rgba(255,255,255,.5);
+  padding:3rem 4vw;
+  border-top:1px solid rgba(255,255,255,.06);
+}
+.footer-inner {
+  max-width:1280px; margin:0 auto;
+  display:flex; align-items:center; justify-content:space-between;
+  flex-wrap:wrap; gap:1.25rem;
+}
+.footer-brand { display:flex; align-items:center; gap:.65rem; text-decoration:none; }
+.footer-brand-mark {
+  width:30px; height:30px; background:var(--blue3);
+  border-radius:var(--radius);
+  display:flex; align-items:center; justify-content:center;
+}
+.footer-brand-mark svg { width:17px; height:17px; stroke:#fff; fill:none; stroke-width:2; }
+.footer-brand strong { font-size:.9rem; font-weight:600; color:#fff; }
+.footer-links { display:flex; gap:1.5rem; list-style:none; flex-wrap:wrap; }
+.footer-links a { font-size:.78rem; color:rgba(255,255,255,.4); transition:color .15s; }
+.footer-links a:hover { color:#fff; }
+.footer-copy { font-size:.75rem; color:rgba(255,255,255,.28); }
+
+/* ── RESPONSIVE ── */
+@media(max-width:900px) {
+  .nav-links-wrap { display:none; }
+  .nav-hamburger { display:flex; }
+  .hide-mobile { display:none !important; }
+  .col-2, .col-3, .col-4 { grid-template-columns:1fr !important; }
+  .section { padding:3.5rem 4vw; }
+}
+
+
+/* ── BLOG SPECIFIC ── */
+.blog-header {
+  background:var(--white);
+  border-bottom:1px solid var(--border);
+  padding:4rem 4vw 3rem;
+}
+.blog-header-inner { max-width:820px; margin:0 auto; }
+.blog-hero-img {
+  max-width:100%; margin:0 auto;
+  border-bottom:1px solid var(--border);
+  overflow:hidden; height:460px;
+}
+.blog-hero-img img { width:100%; height:100%; object-fit:cover; object-position:center center; display:block; }
+.blog-layout {
+  max-width:1200px; margin:0 auto;
+  padding:3rem 4vw 5rem;
+  display:grid;
+  grid-template-columns:1fr 300px;
+  gap:4rem; align-items:start;
+}
+.blog-content { min-width:0; }
+
+/* Typography */
+.blog-content h2 {
+  font-family:'Playfair Display', serif;
+  font-size:1.85rem; font-weight:700; line-height:1.2;
+  color:var(--ink); margin:2.75rem 0 1rem;
+  padding-top:2rem; border-top:1px solid var(--border);
+}
+.blog-content h2:first-child { border-top:none; padding-top:0; margin-top:0; }
+.blog-content h3 {
+  font-family:'Playfair Display', serif;
+  font-size:1.3rem; font-weight:600; color:var(--ink);
+  margin:2rem 0 .75rem; line-height:1.3;
+}
+.blog-content p { font-size:1.05rem; color:var(--ink2); line-height:1.85; margin-bottom:1.25rem; }
+.blog-content p strong { color:var(--ink); font-weight:600; }
+.blog-content p em { color:var(--blue2); font-style:normal; font-weight:500; }
+.blog-content ul { list-style:none; margin:1rem 0 1.5rem; display:grid; gap:.75rem; }
+.blog-content ul li { display:flex; align-items:flex-start; gap:.75rem; font-size:1rem; color:var(--ink2); line-height:1.65; }
+.blog-content ul li::before {
+  content:''; width:18px; height:18px; flex-shrink:0; margin-top:.18rem;
+  background:var(--blue); border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' fill='none' stroke='white' stroke-width='2'%3E%3Cpath d='M2 6l3 3 5-5'/%3E%3C/svg%3E");
+  background-size:10px; background-position:center; background-repeat:no-repeat;
+}
+.blog-content ul li strong { color:var(--ink); font-weight:600; }
+
+/* Key takeaways */
+.takeaways {
+  background:var(--blue-lt); border:1px solid var(--blue-bd);
+  border-top:3px solid var(--blue);
+  border-radius:var(--radius); padding:2rem 2.25rem; margin:0 0 2.5rem;
+}
+.takeaways-title {
+  font-size:.7rem; letter-spacing:.18em; text-transform:uppercase;
+  color:var(--blue); font-weight:700; margin-bottom:1.5rem;
+  display:flex; align-items:center; gap:.5rem;
+}
+.takeaways-grid { display:grid; grid-template-columns:1fr 1fr; gap:0; }
+.taway {
+  display:flex; gap:.9rem; align-items:flex-start;
+  padding:1rem 1.5rem 1rem 0; border-bottom:1px solid var(--blue-bd);
+  font-size:.95rem; color:var(--ink2); line-height:1.6;
+}
+.taway:nth-child(odd) { padding-right:2rem; border-right:1px solid var(--blue-bd); }
+.taway:nth-last-child(-n+2) { border-bottom:none; padding-bottom:0; }
+.taway-n { font-family:'DM Mono',monospace; font-size:.68rem; color:var(--blue); min-width:20px; padding-top:.18rem; opacity:.8; }
+.taway strong { color:var(--ink); font-weight:600; }
+
+/* TOC */
+.toc {
+  border:1px solid var(--border); border-radius:var(--radius);
+  padding:1.5rem 1.75rem; margin-bottom:2.5rem; background:var(--bg);
+}
+.toc-title { font-size:.68rem; letter-spacing:.18em; text-transform:uppercase; color:var(--ink3); font-weight:600; margin-bottom:1rem; }
+.toc ol { list-style:none; display:grid; gap:.4rem; counter-reset:toc; }
+.toc ol li { counter-increment:toc; display:flex; gap:.65rem; font-size:.92rem; }
+.toc ol li::before { content:counter(toc,decimal-leading-zero); font-family:'DM Mono',monospace; font-size:.68rem; color:var(--blue3); flex-shrink:0; padding-top:.18rem; }
+.toc a { color:var(--ink2); border-bottom:1px solid transparent; transition:color .15s,border-color .15s; }
+.toc a:hover { color:var(--blue); border-color:var(--blue); }
+
+/* Inline images */
+.article-img { margin:2.5rem 0; border-radius:var(--radius); overflow:hidden; border:1px solid var(--border); }
+.article-img img { width:100%; height:400px; object-fit:cover; object-position:center center; display:block; }
+.article-img figcaption { font-size:.78rem; color:var(--ink3); padding:.6rem 1rem; border-top:1px solid var(--border); font-style:italic; background:var(--bg); }
+
+/* Pull quote */
+.pull-quote {
+  border-left:4px solid var(--blue);
+  padding:1.25rem 1.75rem; margin:2.5rem 0;
+  background:var(--bg); border-radius:0 var(--radius) var(--radius) 0;
+}
+.pull-quote p { font-family:'Playfair Display',serif; font-size:1.2rem; font-style:italic; color:var(--ink); margin:0 0 .6rem; line-height:1.6; }
+.pull-quote cite { font-size:.78rem; color:var(--ink3); font-style:normal; }
+
+/* Stats row */
+.stats-trio {
+  display:grid; grid-template-columns:repeat(3,1fr);
+  gap:1px; background:var(--border);
+  border:1px solid var(--border); border-radius:var(--radius);
+  overflow:hidden; margin:2rem 0;
+}
+.stat-trio-cell { background:var(--white); padding:2rem 1.25rem; text-align:center; }
+.stat-trio-n { font-family:'Playfair Display',serif; font-size:2.5rem; font-weight:700; color:var(--blue); line-height:1; margin-bottom:.35rem; }
+.stat-trio-l { font-size:.72rem; color:var(--ink3); text-transform:uppercase; letter-spacing:.1em; }
+
+/* Objections */
+.obj-list { display:grid; gap:1.25rem; margin:1.5rem 0; }
+.obj-item {
+  display:grid; grid-template-columns:1fr 1fr; gap:1px;
+  background:var(--border); border-radius:var(--radius);
+  overflow:hidden; border:1px solid var(--border);
+}
+.obj-cell { background:var(--white); padding:1.25rem 1.4rem; }
+.obj-label { font-size:.65rem; letter-spacing:.14em; text-transform:uppercase; font-weight:700; margin-bottom:.4rem; }
+.obj-cell.q .obj-label { color:var(--red); }
+.obj-cell.a .obj-label { color:var(--green); }
+.obj-cell p { font-size:.9rem; color:var(--ink2); line-height:1.6; margin:0; }
+.obj-cell p strong { color:var(--ink); font-weight:600; }
+
+/* Industries */
+.industry-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; margin:1.5rem 0; }
+.industry-card {
+  background:var(--bg); border:1px solid var(--border);
+  border-radius:var(--radius); padding:1.5rem;
+  transition:border-color .2s;
+}
+.industry-card:hover { border-color:var(--blue3); }
+.industry-icon { font-size:1.5rem; margin-bottom:.65rem; }
+.industry-card h4 { font-size:.95rem; font-weight:600; color:var(--ink); margin-bottom:.4rem; }
+.industry-card p { font-size:.83rem; color:var(--ink3); line-height:1.6; margin:0; }
+
+/* Link box */
+.link-box {
+  background:var(--bg); border:1px solid var(--border);
+  border-radius:var(--radius); padding:1.1rem 1.4rem;
+  margin:2rem 0; display:flex; gap:.8rem; align-items:flex-start;
+}
+.link-box svg { width:16px; height:16px; stroke:var(--blue); flex-shrink:0; margin-top:.2rem; fill:none; stroke-width:1.5; }
+.link-box p { font-size:.88rem; color:var(--ink2); margin:0; line-height:1.55; }
+.link-box a { color:var(--blue); font-weight:600; border-bottom:1px solid var(--blue-bd); transition:border-color .15s; }
+.link-box a:hover { border-color:var(--blue); }
+
+/* CTA in blog */
+.blog-cta-block {
+  background:var(--ink); color:#fff;
+  border-radius:var(--radius); padding:2.75rem; margin:3rem 0; text-align:center;
+}
+.blog-cta-block h3 { font-family:'Playfair Display',serif; font-size:1.75rem; font-weight:700; margin-bottom:.65rem; }
+.blog-cta-block p { font-size:.95rem; color:rgba(255,255,255,.6); max-width:440px; margin:0 auto 1.75rem; line-height:1.65; }
+.blog-cta-btn {
+  display:inline-flex; align-items:center; gap:.5rem;
+  background:var(--blue3); color:#fff; font-size:.85rem; font-weight:700;
+  padding:.8rem 1.9rem; border-radius:var(--radius); text-decoration:none;
+  transition:background .15s;
+}
+.blog-cta-btn:hover { background:var(--blue2); }
+
+/* Author */
+.blog-author {
+  display:flex; gap:1.4rem; align-items:flex-start;
+  border-top:1px solid var(--border); border-bottom:1px solid var(--border);
+  padding:2.25rem 0; margin:2.5rem 0;
+}
+.author-avatar {
+  width:56px; height:56px; border-radius:50%;
+  background:var(--blue); display:flex; align-items:center;
+  justify-content:center; font-size:.85rem; font-weight:700; color:#fff; flex-shrink:0;
+}
+.author-name { font-size:.95rem; font-weight:700; color:var(--ink); margin-bottom:.15rem; }
+.author-role { font-size:.72rem; text-transform:uppercase; letter-spacing:.1em; color:var(--blue); font-weight:600; margin-bottom:.6rem; }
+.author-bio { font-size:.88rem; color:var(--ink3); line-height:1.65; margin:0; }
+
+/* Related posts */
+.related-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; margin-top:1.5rem; }
+.related-card {
+  background:var(--bg); border:1px solid var(--border);
+  border-radius:var(--radius); padding:1.25rem;
+  text-decoration:none; display:block; transition:border-color .2s;
+}
+.related-card:hover { border-color:var(--blue3); }
+.related-tag { font-size:.62rem; letter-spacing:.14em; text-transform:uppercase; color:var(--blue); font-weight:700; display:block; margin-bottom:.45rem; }
+.related-card h4 { font-size:.88rem; font-weight:600; color:var(--ink); line-height:1.4; }
+
+/* Blog sidebar */
+.blog-sidebar {
+  position:sticky; top:88px;
+  display:flex; flex-direction:column; gap:1.5rem;
+}
+.blog-sidebar-card {
+  background:var(--white); border:1px solid var(--border);
+  border-radius:var(--radius); overflow:hidden;
+}
+.blog-sidebar-card-head {
+  background:var(--bg); padding:.85rem 1.1rem;
+  font-size:.68rem; letter-spacing:.16em; text-transform:uppercase;
+  color:var(--ink3); font-weight:600; border-bottom:1px solid var(--border);
+}
+.blog-sidebar-card-body { padding:1.1rem; }
+.sidebar-mini-posts { display:flex; flex-direction:column; gap:0; }
+.sidebar-mini-post {
+  display:flex; gap:.75rem; padding:.85rem 0;
+  border-bottom:1px solid var(--border); text-decoration:none;
+}
+.sidebar-mini-post:last-child { border-bottom:none; padding-bottom:0; }
+.sidebar-mini-post img { width:56px; height:44px; object-fit:cover; object-position:center center; border-radius:4px; flex-shrink:0; }
+.sidebar-mini-cat { font-size:.58rem; letter-spacing:.12em; text-transform:uppercase; color:var(--blue); font-weight:700; display:block; margin-bottom:.2rem; }
+.sidebar-mini-title { font-size:.8rem; font-weight:500; color:var(--ink); line-height:1.35; transition:color .15s; }
+.sidebar-mini-post:hover .sidebar-mini-title { color:var(--blue); }
+.sidebar-cta-card {
+  background:var(--blue-lt); border:1px solid var(--blue-bd);
+  border-radius:var(--radius); padding:1.5rem; text-align:center;
+}
+.sidebar-cta-card h4 { font-size:.95rem; font-weight:700; color:var(--ink); margin-bottom:.5rem; }
+.sidebar-cta-card p { font-size:.82rem; color:var(--ink3); margin-bottom:1rem; line-height:1.5; }
+.sidebar-cta-card a {
+  display:block; background:var(--blue); color:#fff;
+  font-size:.8rem; font-weight:600; padding:.65rem 1rem;
+  border-radius:var(--radius); text-decoration:none;
+  transition:background .15s;
+}
+.sidebar-cta-card a:hover { background:var(--blue2); }
+
+/* Updated badge */
+.updated-badge {
+  display:inline-flex; align-items:center; gap:.4rem;
+  background:rgba(5,150,105,.08); border:1px solid rgba(5,150,105,.2);
+  padding:.25rem .75rem; border-radius:20px;
+  font-size:.7rem; letter-spacing:.08em; text-transform:uppercase;
+  color:var(--green); font-weight:600; margin-bottom:1.25rem;
+}
+
+@media(max-width:960px) {
+  .blog-layout { grid-template-columns:1fr; }
+  .blog-sidebar { position:static; }
+  .takeaways-grid, .obj-item, .industry-grid, .related-grid, .stats-trio { grid-template-columns:1fr; }
+  .taway:nth-child(odd) { padding-right:0; border-right:none; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="site-nav">
+  <a href="index.html" class="nav-brand">
+    <div class="nav-brand-mark"><svg viewBox="0 0 24 24"><path d="M12 2l2.5 7h7l-5.7 4.1 2.2 7-6-4.4-6 4.4 2.2-7L3.5 9h7z"/></svg></div>
+    <div class="nav-brand-text">
+      <strong>Drone Cleaning Solutions</strong>
+      <span>Mexico &amp; El Salvador</span>
+    </div>
+  </a>
+  <div class="nav-links-wrap">
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#technology">Technology</a></li>
+      <li><a href="index.html#videos">Videos</a></li>
+      <li><a href="index.html#insights" class="active">Blog</a></li>
+      <li><a href="index.html#cta">Contact</a></li>
+    </ul>
+    <a href="index.html#cta" class="nav-cta btn">Book a Call</a>
+  </div>
+  <button class="nav-hamburger" aria-label="Open menu" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="nav-drawer" id="navDrawer">
+  <a href="index.html" onclick="toggleMenu()">Home</a>
+  <a href="index.html#technology" onclick="toggleMenu()">Technology</a>
+  <a href="index.html#videos" onclick="toggleMenu()">Videos</a>
+  <a href="index.html#insights" onclick="toggleMenu()">Blog</a>
+  <a href="index.html#cta" onclick="toggleMenu()">Contact</a>
+  <a href="index.html#cta" class="drawer-cta" onclick="toggleMenu()">Book a Free Call</a>
+</div>
+
+<!-- BLOG HEADER -->
+<div class="page-top"></div>
+<div class="blog-header">
+  <div class="blog-header-inner">
+    <div class="updated-badge">&#10003; Last updated: May 2026</div>
+    <div class="eyebrow">Drone Technology &middot; Latin America</div>
+    <h1 class="display" style="margin-bottom:1.25rem;max-width:740px;">Why Drone Cleaning Is the Smarter Way to Maintain Buildings in Latin America</h1>
+    <div style="display:flex;gap:1.5rem;flex-wrap:wrap;font-size:.82rem;color:var(--ink3);margin-bottom:1.25rem;">
+      <span>By <strong style="color:var(--ink2);">Drone Cleaning Solutions</strong></span>
+      <span>May 2026</span>
+      <span>12 min read</span>
+      <span>&#128205; Mexico &middot; El Salvador</span>
+    </div>
+    <p style="font-size:1.1rem;color:var(--ink2);line-height:1.78;max-width:680px;">Across Latin America, thousands of commercial buildings are cleaned the same way they were 50 years ago &mdash; ropes, scaffolding, and workers dangling at height. There is a faster, safer, and dramatically cheaper alternative. This is what it looks like, how it works, and why the region is about to change forever.</p>
+  </div>
+</div>
+
+<!-- HERO IMAGE -->
+<div class="blog-hero-img">
+  <img src="https://eauav.com/wp-content/uploads/2025/06/high-rise-buildings.jpg" alt="Drone cleaning high-rise building facade commercial district" loading="eager">
+</div>
+
+<!-- BLOG LAYOUT -->
+<div class="blog-layout">
+
+  <!-- MAIN CONTENT -->
+  <article class="blog-content">
+
+    <!-- KEY TAKEAWAYS -->
+    <div class="takeaways">
+      <div class="takeaways-title">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="var(--blue)" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        Key Takeaways
+      </div>
+      <div class="takeaways-grid">
+        <div class="taway"><span class="taway-n">01</span><span>Drone cleaning is <strong>3&ndash;5&times; faster</strong> than scaffolding &mdash; a full facade cleaned in a single morning.</span></div>
+        <div class="taway"><span class="taway-n">02</span><span>Total costs run <strong>30&ndash;60% lower</strong> when scaffolding, insurance, and disruption time are included.</span></div>
+        <div class="taway"><span class="taway-n">03</span><span>A single operator covers <strong>400&ndash;800m&sup2; per hour</strong> with zero workers exposed at height.</span></div>
+        <div class="taway"><span class="taway-n">04</span><span>Ionized water delivers a <strong>streak-free, chemical-free finish</strong> with no toxic residue left behind.</span></div>
+        <div class="taway"><span class="taway-n">05</span><span>Latin America &mdash; Mexico and El Salvador &mdash; represents an <strong>untapped first-mover opportunity</strong>.</span></div>
+        <div class="taway"><span class="taway-n">06</span><span>Suitable for offices, hotels, retail, hospitals, industrial facilities, and university campuses.</span></div>
+      </div>
+    </div>
+
+    <!-- TOC -->
+    <div class="toc">
+      <div class="toc-title">In This Article</div>
+      <ol>
+        <li><a href="#problem">The problem with traditional high-rise cleaning</a></li>
+        <li><a href="#ionized">What is ionized water drone cleaning?</a></li>
+        <li><a href="#numbers">The numbers that matter</a></li>
+        <li><a href="#objections">Questions every facility manager asks</a></li>
+        <li><a href="#latam">Why Latin America &mdash; and why now</a></li>
+        <li><a href="#industries">Which buildings benefit most</a></li>
+        <li><a href="#future">Where this is heading</a></li>
+      </ol>
+    </div>
+
+    <p>I have stood on job sites and watched traditional cleaning crews spend days erecting scaffolding on a building that our drone can clean in a single morning. I have heard stories &mdash; too close to home, literally &mdash; of workers suffering near-fatal scares at height. Not accidents. <strong>Near misses.</strong> The kind that gets filed away quietly and never talked about again.</p>
+    <p>That is part of why we started Drone Cleaning Solutions. Not just because the technology is remarkable &mdash; and it is &mdash; but because the status quo in building maintenance across Mexico, El Salvador, and the wider Latin American region carries a human cost that no one talks about loudly enough.</p>
+    <p>This post is for facility managers, building owners, and property directors who are starting to ask the question: <strong>Is there a better way?</strong> The answer is yes. And in this article, I want to give you the most honest, complete, and practical explanation of what drone-powered ionized water cleaning actually is, what it delivers, and why right now is the moment to pay attention.</p>
+
+    <h2 id="problem">The Problem with Traditional High-Rise Cleaning</h2>
+    <p>Let us be direct. Scaffolding-based and rope-access cleaning is dangerous, slow, expensive, and disruptive. In markets where labour is relatively cheap &mdash; like much of Latin America &mdash; the cost argument is sometimes used to justify continuing the old way. But cost per hour of labour is only one variable in the equation.</p>
+    <ul>
+      <li><strong>Safety liability:</strong> Every worker deployed at height is a liability. Near-misses are underreported. Fatalities are not unheard of. The human cost alone should be reason enough to seek alternatives.</li>
+      <li><strong>Speed:</strong> A traditional scaffolding setup for a mid-rise building can take one to two days before cleaning even begins. A drone operation is airborne within minutes.</li>
+      <li><strong>Disruption:</strong> Scaffolding blocks entrances, obstructs signage, and creates noise and chaos for tenants, customers, and visitors &mdash; a reputational and operational problem for hotels, retail, and offices alike.</li>
+      <li><strong>Chemical residue:</strong> Traditional cleaning chemicals leave toxic residues on surfaces, in drainage systems, and in the surrounding air &mdash; a growing concern for ESG-conscious property owners.</li>
+      <li><strong>Frequency:</strong> Because traditional cleaning is so costly and disruptive, most buildings are cleaned far less often than they should be &mdash; accelerating facade deterioration over time.</li>
+    </ul>
+
+    <figure class="article-img">
+      <img src="https://eauav.com/wp-content/uploads/2025/06/facade-cleaning-drone-768x473.jpg" alt="Professional drone cleaning glass building facade" loading="lazy">
+      <figcaption>The EAUAV Vertex C80 drone system in operation &mdash; a single ground-based technician controls the entire process, with no workers at height at any point.</figcaption>
+    </figure>
+
+    <div class="link-box">
+      <svg viewBox="0 0 24 24"><path d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
+      <p><strong>Related reading:</strong> <a href="#">The True Cost of Scaffolding: What Facility Managers in Mexico Are Not Accounting For</a> &mdash; a deep dive into hidden costs. <em>(Coming soon)</em></p>
+    </div>
+
+    <h2 id="ionized">What Is Ionized Water Drone Cleaning &mdash; and Why Does It Work?</h2>
+    <p>When most people hear "drone cleaning," they picture a consumer quadcopter with a garden hose taped to it. The reality is considerably more sophisticated &mdash; and the results speak for themselves.</p>
+    <p>Our system uses a professional-grade, tethered heavy-lift drone equipped with a precision nozzle and an integrated ionized water delivery system. The drone is operated by a single trained technician on the ground. There is no one on the facade. There is no rope. There is no scaffold. <strong>The only thing touching your building is water.</strong></p>
+
+    <h3>Why ionized water specifically?</h3>
+    <p>Ionized water &mdash; sometimes called electrolyzed water &mdash; is water that has been treated to alter its electrical charge. This gives it properties ordinary water simply does not have:</p>
+    <ul>
+      <li><strong>Cuts through grease and grime</strong> at a molecular level, without the need for harsh chemical detergents.</li>
+      <li><strong>Disinfects surfaces</strong> &mdash; ionized water neutralizes bacteria and pathogens on contact, making it particularly valuable for healthcare facilities, hotels, and food-adjacent properties.</li>
+      <li><strong>Leaves zero toxic residue</strong> &mdash; it reverts to ordinary water after application, with no chemical runoff and no hazard to people in or around the building.</li>
+      <li><strong>Delivers a streak-free, fast-drying finish</strong> &mdash; the molecular structure sheets off glass cleanly, without the streaking that soap-based systems commonly produce.</li>
+    </ul>
+
+    <figure class="article-img">
+      <img src="https://eauav.com/wp-content/uploads/2026/05/EAUAV-Vertex-C80C80P-Facade-Cleaning-Drone-System.png" alt="EAUAV Vertex C80 ionized water drone cleaning system" loading="lazy">
+      <figcaption>Ionized water in action &mdash; the precision nozzle delivers a controlled, high-pressure jet that leaves no chemical residue and no streaks.</figcaption>
+    </figure>
+
+    <div class="pull-quote">
+      <p>&ldquo;The smarter way to clean at heights &mdash; streak-minimizing, low-disruption, and built for modern properties.&rdquo;</p>
+      <cite>&mdash; Drone Cleaning Solutions</cite>
+    </div>
+
+    <h2 id="numbers">The Numbers That Matter</h2>
+    <div class="stats-trio">
+      <div class="stat-trio-cell"><div class="stat-trio-n">3&ndash;5&times;</div><div class="stat-trio-l">Faster than scaffolding</div></div>
+      <div class="stat-trio-cell"><div class="stat-trio-n">60%</div><div class="stat-trio-l">Lower total cost</div></div>
+      <div class="stat-trio-cell"><div class="stat-trio-n">800m&sup2;</div><div class="stat-trio-l">Coverage per hour</div></div>
+    </div>
+    <p>To put that into real terms: a commercial building facade that would traditionally require a full day or more of scaffolding setup &mdash; plus two to three days of manual cleaning &mdash; can be completed in a single morning. With one operator. At up to 60% lower total cost. And with zero human exposure at height.</p>
+
+    <div class="link-box">
+      <svg viewBox="0 0 24 24"><path d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
+      <p><strong>Related reading:</strong> <a href="#">Drone Cleaning vs Scaffolding: A Full Cost Comparison for Latin American Property Managers</a> <em>(Coming soon)</em></p>
+    </div>
+
+    <h2 id="objections">The Questions Every Facility Manager Asks Us</h2>
+    <div class="obj-list">
+      <div class="obj-item">
+        <div class="obj-cell q"><div class="obj-label">The Concern</div><p>"Is it actually safe? What if the drone crashes into the building?"</p></div>
+        <div class="obj-cell a"><div class="obj-label">The Reality</div><p>Our systems use real-time obstacle detection and automated failsafes. No human is ever at height &mdash; eliminating the single biggest safety risk of traditional cleaning entirely.</p></div>
+      </div>
+      <div class="obj-item">
+        <div class="obj-cell q"><div class="obj-label">The Concern</div><p>"What if it damages the facade or breaks a window?"</p></div>
+        <div class="obj-cell a"><div class="obj-label">The Reality</div><p>The precision nozzle is calibrated for each surface type. Water pressure is carefully controlled. Full liability insurance covers every operation. <strong>Chemical-free water is significantly less damaging</strong> than solvents over time.</p></div>
+      </div>
+      <div class="obj-item">
+        <div class="obj-cell q"><div class="obj-label">The Concern</div><p>"Is it legal to fly drones near commercial buildings?"</p></div>
+        <div class="obj-cell a"><div class="obj-label">The Reality</div><p>We operate in full compliance with aviation authorities in each market. Every site assessment includes a regulatory check. <strong>Compliance is built into every job</strong>, not bolted on afterwards.</p></div>
+      </div>
+      <div class="obj-item">
+        <div class="obj-cell q"><div class="obj-label">The Concern</div><p>"Does it actually clean well? Or is it just a gimmick?"</p></div>
+        <div class="obj-cell a"><div class="obj-label">The Reality</div><p>Ionized water cuts through grease, neutralizes bacteria, and leaves a streak-free finish. The before-and-after results are immediate and visible. This is a <strong>proven industrial cleaning method</strong>, now delivered at height without scaffolding.</p></div>
+      </div>
+    </div>
+
+    <figure class="article-img">
+      <img src="https://static.wixstatic.com/media/cafe27_7e9703ee3014418d92e1d7fdf1e07767~mv2.jpg/v1/fill/w_1200,h_675,al_c,q_90/drone%20building%20cleaning%20removal%20of%20organic%20mineral%20stains%20by%20dronewashplus.jpg" alt="Before and after drone cleaning commercial building facade" loading="lazy">
+      <figcaption>Real results &mdash; years of grime, organic stains, and soot removed in a single drone cleaning session.</figcaption>
+    </figure>
+
+    <h2 id="latam">Why Latin America &mdash; and Why Now</h2>
+    <p>Drone cleaning is already established in parts of Asia, the United States, and Europe. In Latin America, it is almost entirely untapped. That is not a weakness &mdash; <strong>it is a window.</strong></p>
+    <p>The argument that cheap labour makes drone cleaning unnecessary misses the bigger picture. Yes, manual labour costs less per hour in Mexico or El Salvador than in Germany or California. But that calculation ignores several critical factors:</p>
+    <ul>
+      <li><strong>The total operational cost</strong> &mdash; including scaffolding hire, insurance, disruption to tenants, and time lost.</li>
+      <li><strong>The liability exposure</strong> &mdash; one serious injury on a job site can cost a building owner far more than years of drone cleaning contracts.</li>
+      <li><strong>The appearance economy</strong> &mdash; as Latin American cities grow and attract international investment, the standard for commercial property presentation is rising rapidly.</li>
+      <li><strong>The sustainability pressure</strong> &mdash; ESG requirements are reaching Latin American commercial real estate. Chemical-free, low-disruption maintenance is becoming an expectation.</li>
+    </ul>
+
+    <figure class="article-img">
+      <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900&q=85&auto=format&fit=crop" alt="AeroClean tethered drone system operating over commercial buildings" loading="lazy">
+      <figcaption>The future of building maintenance in Latin America &mdash; multi-drone deployment for large commercial properties.</figcaption>
+    </figure>
+
+    <div class="pull-quote">
+      <p>&ldquo;Latin America is rising. Businesses want to be presentable. The buildings are there. The technology is here. The question is simply: who moves first?&rdquo;</p>
+      <cite>&mdash; Drone Cleaning Solutions, Mexico &amp; El Salvador</cite>
+    </div>
+
+    <h2 id="industries">Which Buildings and Industries Benefit Most</h2>
+    <div class="industry-grid">
+      <div class="industry-card"><div class="industry-icon">&#127970;</div><h4>Office Buildings</h4><p>Glass facades, corporate image, and tenant sensitivity to disruption make offices prime candidates.</p></div>
+      <div class="industry-card"><div class="industry-icon">&#127968;</div><h4>Hotels &amp; Hospitality</h4><p>Drone cleaning operates with minimal noise and zero disruption to guests &mdash; schedulable for off-peak hours.</p></div>
+      <div class="industry-card"><div class="industry-icon">&#127978;</div><h4>Retail Centres</h4><p>Scaffolding blocks storefronts and kills foot traffic. Drones keep buildings clean without closing any entrance.</p></div>
+      <div class="industry-card"><div class="industry-icon">&#127973;</div><h4>Healthcare Facilities</h4><p>Ionized water&rsquo;s antibacterial properties make this invaluable for hospitals and clinics.</p></div>
+      <div class="industry-card"><div class="industry-icon">&#127981;</div><h4>Industrial Facilities</h4><p>Warehouses and logistics hubs accumulate grime fast. Drones cover large areas at speed.</p></div>
+      <div class="industry-card"><div class="industry-icon">&#127979;</div><h4>Universities &amp; Campuses</h4><p>Large, complex footprints with reputational stakes &mdash; drone cleaning simplifies the logistics significantly.</p></div>
+    </div>
+
+    <div class="link-box">
+      <svg viewBox="0 0 24 24"><path d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
+      <p><strong>Related reading:</strong> <a href="#">Beyond Buildings: How Drone Cleaning Is Expanding Into Solar Panels, Bridges &amp; Industrial Infrastructure</a> <em>(Coming soon)</em></p>
+    </div>
+
+    <h2 id="future">Where This Is Heading</h2>
+    <p>In the next three to five years, drone cleaning will be a recognized and established service category across Latin America. More operators will enter the market. Regulation will mature. Prices will stabilize. The technology will become an expected option rather than a surprising novelty.</p>
+    <p>But right now &mdash; in 2026 &mdash; we are still in the early window. The building owners and facility managers who engage with this technology today will have established relationships, institutional knowledge, and preferred pricing before the market crowds. <strong>First-mover advantage in a service industry is real and lasting.</strong></p>
+    <p>Our vision at Drone Cleaning Solutions is straightforward: to become the most trusted modern exterior cleaning brand for properties across Latin America that want safer operations, cleaner buildings, and more sustainable maintenance solutions.</p>
+
+    <!-- BLOG CTA -->
+    <div class="blog-cta-block">
+      <h3>Ready to See It in Action?</h3>
+      <p>Book a free 30-minute call with our team. We will assess your building, answer every question, and give you a custom scope &mdash; no obligation.</p>
+      <a href="index.html#cta" class="blog-cta-btn">
+        Book Your Free Call
+        <svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+      </a>
+    </div>
+
+    <!-- AUTHOR -->
+    <div class="blog-author">
+      <div class="author-avatar">DCS</div>
+      <div>
+        <div class="author-name">Drone Cleaning Solutions</div>
+        <div class="author-role">Drone Cleaning Specialists &middot; Mexico &amp; El Salvador</div>
+        <p class="author-bio">We are a drone-powered exterior cleaning company operating across Latin America. Founded on four principles &mdash; safety, speed, less disruption, and visible innovation &mdash; we use ionized water technology and precision drone systems to deliver faster, safer, and more sustainable building maintenance, without scaffolding, without chemicals, and without putting anyone at height.</p>
+      </div>
+    </div>
+
+    <!-- RELATED -->
+    <div>
+      <div style="font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink3);font-weight:600;padding-bottom:.85rem;border-bottom:1px solid var(--border);margin-bottom:1.1rem;">Continue Reading</div>
+      <div class="related-grid">
+        <a href="#" class="related-card"><span class="related-tag">Technology</span><h4>How Ionized Water Works: The Science Behind Chemical-Free Cleaning</h4></a>
+        <a href="#" class="related-card"><span class="related-tag">Cost Analysis</span><h4>Drone vs Scaffolding: Full Cost Breakdown for Latin American Managers</h4></a>
+        <a href="#" class="related-card"><span class="related-tag">Safety</span><h4>Is Drone Cleaning Safe? Regulations, Insurance &amp; Risk Explained</h4></a>
+        <a href="#" class="related-card"><span class="related-tag">Market</span><h4>El Salvador&rsquo;s Property Boom &amp; Building Maintenance Standards</h4></a>
+        <a href="#" class="related-card"><span class="related-tag">Expansion</span><h4>Beyond Buildings: Solar Panels, Bridges &amp; Industrial Cleaning</h4></a>
+        <a href="#" class="related-card"><span class="related-tag">Buyer Guide</span><h4>7 Questions to Ask Your Drone Cleaning Provider Before Booking</h4></a>
+      </div>
+    </div>
+
+  </article>
+
+  <!-- BLOG SIDEBAR -->
+  <aside class="blog-sidebar">
+    <div class="blog-sidebar-card">
+      <div class="blog-sidebar-card-head">More Articles</div>
+      <div class="blog-sidebar-card-body">
+        <div class="sidebar-mini-posts">
+          <a href="#" class="sidebar-mini-post">
+            <img src="https://eauav.com/wp-content/uploads/2026/05/EAUAV-Vertex-C80C80P-Facade-Cleaning-Drone-System.png" alt="">
+            <div><span class="sidebar-mini-cat">Technology</span><div class="sidebar-mini-title">How Ionized Water Works: Chemical-Free Cleaning Explained</div></div>
+          </a>
+          <a href="#" class="sidebar-mini-post">
+            <img src="https://eauav.com/wp-content/uploads/2025/06/facade-cleaning-drone-768x473.jpg" alt="">
+            <div><span class="sidebar-mini-cat">Cost Analysis</span><div class="sidebar-mini-title">Drone vs Scaffolding: Full Cost Breakdown</div></div>
+          </a>
+          <a href="#" class="sidebar-mini-post">
+            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900&q=85&auto=format&fit=crop" alt="">
+            <div><span class="sidebar-mini-cat">Safety</span><div class="sidebar-mini-title">Is Drone Cleaning Safe? Regulations &amp; Insurance</div></div>
+          </a>
+          <a href="#" class="sidebar-mini-post">
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=900&q=85&auto=format&fit=crop" alt="">
+            <div><span class="sidebar-mini-cat">Market</span><div class="sidebar-mini-title">El Salvador&rsquo;s Property Boom &amp; Maintenance</div></div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="sidebar-cta-card">
+      <h4>Book a Free Call</h4>
+      <p>Speak with our specialist and get a custom quote within 48 hours.</p>
+      <a href="index.html#cta">Schedule Now &rarr;</a>
+    </div>
+    </aside>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <a href="index.html" class="footer-brand">
+      <div class="footer-brand-mark"><svg viewBox="0 0 24 24"><path d="M12 2l2.5 7h7l-5.7 4.1 2.2 7-6-4.4-6 4.4 2.2-7L3.5 9h7z"/></svg></div>
+      <strong>Drone Cleaning Solutions</strong>
+    </a>
+    <p class="footer-copy">&copy; 2026 Drone Cleaning Solutions. Mexico &middot; El Salvador.</p>
+    <ul class="footer-links">
+      <li><a href="#">Privacy Policy</a></li>
+      <li><a href="#">Terms</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#">LinkedIn</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script>
+function toggleMenu() {
+  document.getElementById('navDrawer').classList.toggle('open');
+}
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+}, {threshold:0.07});
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
